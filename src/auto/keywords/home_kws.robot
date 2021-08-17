@@ -5,7 +5,6 @@ Resource         ../../config/package.resource
 
 *** Keywords ***
 Dado que o cliente está na tela inicial da aplicação 
-    Abrir a sessão
     Wait Until element Is Visible    ${HOME.BOTAO_SIGNIN}
 
 E acessar a tela de login
