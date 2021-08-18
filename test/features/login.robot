@@ -15,8 +15,17 @@ Test Teardown    Encerrar sessão
 Cenario: Login com sucesso
     Dado que o cliente está na tela inicial da aplicação 
     E acessar a tela de login
-    Quando realizar login com sucesso
-    Então deve visualizar a tela MY ACCOUNT 
+    Quando inserir os dados de login    rasafa9934@ovooovo.com    Teste@123
+    E clicar no elemento    ${LOGIN.BOTAO_SIGNIN}
+    Então deve visualizar a tela MY ACCOUNT
+   
+Cenario: Login com credenciais inválido 
+    Dado que o cliente está na tela inicial da aplicação 
+    E acessar a tela de login
+    Quando inserir os dados de login    salete@ovooovo.com    Teste@111
+    E clicar no elemento    ${LOGIN.BOTAO_SIGNIN} 
+    Então deve visualizar a mensagem de erro    ${LOGIN.TEXTO_ERRO}    Authentication failed. 
+  
 
 
 #   Criar as Keywords - importar as bibliotecas (pip instal - seleniumLibrary / fake Library / Strig - cuidar com versões certas) 
