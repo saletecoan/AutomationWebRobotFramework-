@@ -1,0 +1,10 @@
+
+#Centralizando os dados com dados específicos
+MASSA_DADOS:
+    LOGIN:
+        EMAIL:  rasafa9934@ovooovo.com    
+        SENHA:  Teste@123
+    LOGIN_INVALIDO:
+        EMAIL:  salete@ovooovo.com    
+        SENHA:  salete@123
+    
