@@ -13,10 +13,23 @@ Test Teardown    Encerrar sessão
 
 *** Test Cases ***
 Cenario: Login com sucesso
+#Tag controlar a execução de teste TAGS e colocar em todos os cenarios que utiliza
+#Funcionalidade - login / SMOKE - fumaça - sempre executado minimo da aplicação
+    [Tags]    LOGIN    POSITIVO           
     Dado que o cliente está na tela inicial da aplicação 
     E acessar a tela de login
-    Quando realizar login com sucesso
-    Então deve visualizar a tela MY ACCOUNT 
+    Quando inserir os dados de login    ${MASSA_DADOS.LOGIN.EMAIL}    ${MASSA_DADOS.LOGIN.SENHA}
+    E clicar no elemento    ${LOGIN.BOTAO_SIGNIN}
+    Então deve visualizar a tela MY ACCOUNT
+   
+Cenario: Login com credenciais inválido 
+    [Tags]    LOGIN    NEGATIVO 
+    Dado que o cliente está na tela inicial da aplicação 
+    E acessar a tela de login
+    Quando inserir os dados de login    ${MASSA_DADOS.LOGIN_INVALIDO.EMAIL}    ${MASSA_DADOS.LOGIN_INVALIDO.SENHA}
+    E clicar no elemento    ${LOGIN.BOTAO_SIGNIN} 
+    Então deve visualizar a mensagem de erro    ${LOGIN.TEXTO_ERRO}    Authentication failed. 
+  
 
 
 #   Criar as Keywords - importar as bibliotecas (pip instal - seleniumLibrary / fake Library / Strig - cuidar com versões certas) 
