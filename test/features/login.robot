@@ -28,8 +28,7 @@ Cenario: Login com credenciais inválido
     E acessar a tela de login
     Quando inserir os dados de login    ${MASSA_DADOS.LOGIN_INVALIDO.EMAIL}    ${MASSA_DADOS.LOGIN_INVALIDO.SENHA}
     E clicar no elemento    ${LOGIN.BOTAO_SIGNIN} 
-    Então deve visualizar a mensagem de erro    ${LOGIN.TEXTO_ERRO}    Authentication failed. 
+    Então deve visualizar a mensagem de erro    ${LOGIN.TEXTO_ERRO}  ${MENSAGENS.LOGIN.AUTHENTICATION_FAILED}  
   
-
 
 #   Criar as Keywords - importar as bibliotecas (pip instal - seleniumLibrary / fake Library / Strig - cuidar com versões certas) 
