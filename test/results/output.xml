@@ -1,94 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210819 21:06:36.962" rpa="false" schemaversion="2">
-<suite id="s1" name="Features" source="C:\Users\mtenorio\AutomationWebRobotFramework-\test\features">
-<suite id="s1-s1" name="Cadastro" source="C:\Users\mtenorio\AutomationWebRobotFramework-\test\features\cadastro.robot">
-<test id="s1-s1-t1" name="Cenario: Validar cadastro com sucesso">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210820 21:08:17.050" rpa="false" schemaversion="2">
+<suite id="s1" name="Cadastro" source="C:\Users\mtenorio\AutomationWebRobotFramework-\test\features\cadastro.robot">
+<test id="s1-t1" name="Cenario: Validar cadastro com sucesso">
 <kw name="Abrir sessão" library="setup" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${CONFIG.URL}</arg>
 <arg>${CONFIG.NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210819 21:06:37.552" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20210819 21:06:37.551" endtime="20210819 21:06:43.097"/>
+<msg timestamp="20210820 21:08:17.876" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210820 21:08:17.872" endtime="20210820 21:08:24.404"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>${CONFIG.TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20210819 21:06:43.097" endtime="20210819 21:06:43.099"/>
+<status status="PASS" starttime="20210820 21:08:24.405" endtime="20210820 21:08:24.409"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210819 21:06:43.099" endtime="20210819 21:06:43.211"/>
+<status status="PASS" starttime="20210820 21:08:24.409" endtime="20210820 21:08:24.533"/>
 </kw>
-<status status="PASS" starttime="20210819 21:06:37.550" endtime="20210819 21:06:43.212"/>
+<status status="PASS" starttime="20210820 21:08:17.871" endtime="20210820 21:08:24.534"/>
 </kw>
 <kw name="Dado que o cliente está na tela inicial da aplicação" library="home_kws">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${HOME.BOTAO_SIGNIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210819 21:06:43.213" endtime="20210819 21:06:43.249"/>
+<status status="PASS" starttime="20210820 21:08:24.536" endtime="20210820 21:08:24.579"/>
 </kw>
-<status status="PASS" starttime="20210819 21:06:43.212" endtime="20210819 21:06:43.249"/>
+<status status="PASS" starttime="20210820 21:08:24.535" endtime="20210820 21:08:24.579"/>
 </kw>
 <kw name="E acessar a tela de login" library="home_kws">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${HOME.BOTAO_SIGNIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210819 21:06:43.251" endtime="20210819 21:06:43.279"/>
+<status status="PASS" starttime="20210820 21:08:24.581" endtime="20210820 21:08:24.614"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${HOME.BOTAO_SIGNIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 21:06:43.281" level="INFO">Clicking element '//a[@class='login']'.</msg>
-<status status="PASS" starttime="20210819 21:06:43.280" endtime="20210819 21:06:45.239"/>
+<msg timestamp="20210820 21:08:24.615" level="INFO">Clicking element '//a[@class='login']'.</msg>
+<status status="PASS" starttime="20210820 21:08:24.615" endtime="20210820 21:08:25.826"/>
 </kw>
-<status status="PASS" starttime="20210819 21:06:43.251" endtime="20210819 21:06:45.240"/>
+<status status="PASS" starttime="20210820 21:08:24.580" endtime="20210820 21:08:25.826"/>
 </kw>
 <kw name="E acessar a tela de cadastro" library="cadastro_kws">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${LOGIN.INPUT_EMAIL_CADASTRO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210819 21:06:45.241" endtime="20210819 21:06:45.926"/>
+<status status="PASS" starttime="20210820 21:08:25.828" endtime="20210820 21:08:26.944"/>
 </kw>
 <kw name="Email" library="FakerLibrary">
 <var>${NOVO_EMAIL}</var>
-<msg timestamp="20210819 21:06:45.926" level="INFO">${NOVO_EMAIL} = lcosta@hotmail.com</msg>
-<status status="PASS" starttime="20210819 21:06:45.926" endtime="20210819 21:06:45.926"/>
+<msg timestamp="20210820 21:08:26.945" level="INFO">${NOVO_EMAIL} = monteiroemanuella@cavalcanti.com</msg>
+<status status="PASS" starttime="20210820 21:08:26.944" endtime="20210820 21:08:26.945"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${LOGIN.INPUT_EMAIL_CADASTRO}</arg>
 <arg>${NOVO_EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210819 21:06:45.927" level="INFO">Typing text 'lcosta@hotmail.com' into text field '//input[@id='email_create']'.</msg>
-<status status="PASS" starttime="20210819 21:06:45.926" endtime="20210819 21:06:46.019"/>
+<msg timestamp="20210820 21:08:26.947" level="INFO">Typing text 'monteiroemanuella@cavalcanti.com' into text field '//input[@id='email_create']'.</msg>
+<status status="PASS" starttime="20210820 21:08:26.946" endtime="20210820 21:08:27.090"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LOGIN.BOTAO_CREATE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 21:06:46.020" level="INFO">Clicking element 'SubmitCreate'.</msg>
-<status status="PASS" starttime="20210819 21:06:46.019" endtime="20210819 21:06:46.075"/>
+<msg timestamp="20210820 21:08:27.091" level="INFO">Clicking element 'SubmitCreate'.</msg>
+<status status="PASS" starttime="20210820 21:08:27.090" endtime="20210820 21:08:27.167"/>
 </kw>
-<status status="PASS" starttime="20210819 21:06:45.240" endtime="20210819 21:06:46.075"/>
+<status status="PASS" starttime="20210820 21:08:25.827" endtime="20210820 21:08:27.167"/>
 </kw>
-<kw name="Encerrar sessão" library="setup" type="TEARDOWN">
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210819 21:06:46.145" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210819 21:06:46.077" endtime="20210819 21:06:46.145"/>
+<kw name="E preencher o formulário com dados válidos" library="cadastro_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CADASTRO.RADIO_MR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:08:27.168" endtime="20210820 21:08:28.738"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210819 21:06:46.146" endtime="20210819 21:06:48.229"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CADASTRO.RADIO_MR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:28.740" level="INFO">Clicking element '//input[@type='radio' and @name='id_gender' and @id='id_gender1']'.</msg>
+<status status="PASS" starttime="20210820 21:08:28.738" endtime="20210820 21:08:28.807"/>
 </kw>
-<status status="PASS" starttime="20210819 21:06:46.076" endtime="20210819 21:06:48.229"/>
+<kw name="First Name" library="FakerLibrary">
+<var>${NOME}</var>
+<msg timestamp="20210820 21:08:28.808" level="INFO">${NOME} = Bruna</msg>
+<status status="PASS" starttime="20210820 21:08:28.807" endtime="20210820 21:08:28.808"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${NOME}</arg>
+<arg>${NOME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210820 21:08:28.808" level="INFO">${NOME} = Bruna</msg>
+<status status="PASS" starttime="20210820 21:08:28.808" endtime="20210820 21:08:28.808"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_NOME}</arg>
+<arg>${NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:28.810" level="INFO">Typing text 'Bruna' into text field '//input[@id='customer_firstname']'.</msg>
+<status status="PASS" starttime="20210820 21:08:28.808" endtime="20210820 21:08:28.924"/>
+</kw>
+<kw name="Last Name" library="FakerLibrary">
+<var>${SOBRENOME}</var>
+<msg timestamp="20210820 21:08:28.924" level="INFO">${SOBRENOME} = das Neves</msg>
+<status status="PASS" starttime="20210820 21:08:28.924" endtime="20210820 21:08:28.924"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${SOBRENOME}</arg>
+<arg>${SOBRENOME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210820 21:08:28.925" level="INFO">${SOBRENOME} = das Neves</msg>
+<status status="PASS" starttime="20210820 21:08:28.924" endtime="20210820 21:08:28.925"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_SOBRENOME}</arg>
+<arg>${SOBRENOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:28.926" level="INFO">Typing text 'das Neves' into text field '//input[@id='customer_lastname']'.</msg>
+<status status="PASS" starttime="20210820 21:08:28.925" endtime="20210820 21:08:29.057"/>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<var>${SENHA}</var>
+<arg>length=10</arg>
+<arg>special_chars=True</arg>
+<arg>digits=True</arg>
+<arg>upper_case=True</arg>
+<arg>lower_case=True</arg>
+<doc>Generate a random password of the specified ``length``.</doc>
+<msg timestamp="20210820 21:08:29.058" level="INFO">${SENHA} = *r3MY1Jo%g</msg>
+<status status="PASS" starttime="20210820 21:08:29.057" endtime="20210820 21:08:29.058"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:29.060" level="INFO">Typing text '*r3MY1Jo%g' into text field '//input[@id='passwd']'.</msg>
+<status status="PASS" starttime="20210820 21:08:29.059" endtime="20210820 21:08:29.190"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${CADASTRO.SELECT_DIA}</arg>
+<arg>5</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210820 21:08:29.191" level="INFO">Selecting options from selection list '//select[@id='days']' by value 5.</msg>
+<status status="PASS" starttime="20210820 21:08:29.190" endtime="20210820 21:08:29.336"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${CADASTRO.SELECT_MES}</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210820 21:08:29.339" level="INFO">Selecting options from selection list '//select[@id='months']' by value 3.</msg>
+<status status="PASS" starttime="20210820 21:08:29.336" endtime="20210820 21:08:29.430"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${CADASTRO.SELECT_ANO}</arg>
+<arg>1990</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210820 21:08:29.431" level="INFO">Selecting options from selection list '//select[@id='years']' by value 1990.</msg>
+<status status="PASS" starttime="20210820 21:08:29.430" endtime="20210820 21:08:29.535"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_ENDERECO_1}</arg>
+<arg>Rua Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:29.536" level="INFO">Typing text 'Rua Teste' into text field '//input[@id='address1']'.</msg>
+<status status="PASS" starttime="20210820 21:08:29.535" endtime="20210820 21:08:29.649"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_ENDERECO_2}</arg>
+<arg>Apartamento 10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:29.649" level="INFO">Typing text 'Apartamento 10' into text field '//input[@id='address2']'.</msg>
+<status status="PASS" starttime="20210820 21:08:29.649" endtime="20210820 21:08:29.779"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_CIDADE}</arg>
+<arg>Barueri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:29.780" level="INFO">Typing text 'Barueri' into text field '//input[@id='city']'.</msg>
+<status status="PASS" starttime="20210820 21:08:29.779" endtime="20210820 21:08:29.905"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${CADASTRO.SELECT_ESTADO}</arg>
+<arg>Mississippi</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20210820 21:08:29.906" level="INFO">Selecting options from selection list '//select[@id='id_state']' by label Mississippi.</msg>
+<status status="PASS" starttime="20210820 21:08:29.905" endtime="20210820 21:08:30.018"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_CEP}</arg>
+<arg>01234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:30.020" level="INFO">Typing text '01234' into text field '//input[@id='postcode']'.</msg>
+<status status="PASS" starttime="20210820 21:08:30.018" endtime="20210820 21:08:30.137"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${TELEFONE}</var>
+<msg timestamp="20210820 21:08:30.138" level="INFO">${TELEFONE} = (071) 1456 8119</msg>
+<status status="PASS" starttime="20210820 21:08:30.138" endtime="20210820 21:08:30.138"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO.INPUT_CELULAR}</arg>
+<arg>${TELEFONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:30.139" level="INFO">Typing text '(071) 1456 8119' into text field '//input[@id='phone_mobile']'.</msg>
+<status status="PASS" starttime="20210820 21:08:30.138" endtime="20210820 21:08:30.275"/>
+</kw>
+<status status="PASS" starttime="20210820 21:08:27.167" endtime="20210820 21:08:30.275"/>
+</kw>
+<kw name="Quando clicar no elemento" library="comum_kws">
+<arg>${CADASTRO.BOTAO_REGISTER}</arg>
+<kw name="E clicar no elemento" library="comum_kws">
+<arg>${ELEMENTO}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:08:30.280" endtime="20210820 21:08:30.313"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:30.314" level="INFO">Clicking element 'submitAccount'.</msg>
+<status status="PASS" starttime="20210820 21:08:30.313" endtime="20210820 21:08:32.306"/>
+</kw>
+<status status="PASS" starttime="20210820 21:08:30.278" endtime="20210820 21:08:32.306"/>
+</kw>
+<status status="PASS" starttime="20210820 21:08:30.276" endtime="20210820 21:08:32.307"/>
+</kw>
+<kw name="Então deve visualizar a tela MY ACCOUNT" library="minha_conta_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MINHA_CONTA.TITULO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:08:32.308" endtime="20210820 21:08:32.343"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TITULO_ATUAL}</var>
+<arg>${MINHA_CONTA.TITULO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:08:32.370" level="INFO">${TITULO_ATUAL} = MY ACCOUNT</msg>
+<status status="PASS" starttime="20210820 21:08:32.343" endtime="20210820 21:08:32.370"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${TITULO_ATUAL}</arg>
+<arg>MY ACCOUNT</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210820 21:08:32.371" endtime="20210820 21:08:32.372"/>
+</kw>
+<status status="PASS" starttime="20210820 21:08:32.307" endtime="20210820 21:08:32.372"/>
 </kw>
 <tag>CADASTRO</tag>
 <tag>POSITIVO</tag>
-<status status="PASS" starttime="20210819 21:06:37.549" endtime="20210819 21:06:48.230"/>
+<status status="PASS" starttime="20210820 21:08:17.869" endtime="20210820 21:08:32.373"/>
 </test>
-<status status="PASS" starttime="20210819 21:06:36.990" endtime="20210819 21:06:48.233"/>
-</suite>
-<status status="PASS" starttime="20210819 21:06:36.964" endtime="20210819 21:06:48.236"/>
+<status status="PASS" starttime="20210820 21:08:17.052" endtime="20210820 21:08:32.376"/>
 </suite>
 <statistics>
 <total>
@@ -99,8 +262,7 @@
 <stat pass="1" fail="0" skip="0">POSITIVO</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Features">Features</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Cadastro">Features.Cadastro</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
 </suite>
 </statistics>
 <errors>

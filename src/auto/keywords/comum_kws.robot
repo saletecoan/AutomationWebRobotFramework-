@@ -8,4 +8,8 @@ Então deve visualizar a mensagem de erro
     [Arguments]    ${ELEMENTO}    ${MENSAGEM_ESPERADA}    
     Wait Until Element Is Visible    ${ELEMENTO}
     ${MENSAGEM_ATUAL}    Get text    ${ELEMENTO} 
-    Should Be Equal    ${MENSAGEM_ATUAL}    ${MENSAGEM_ESPERADA}   
+    Should Be Equal    ${MENSAGEM_ATUAL}    ${MENSAGEM_ESPERADA} 
+
+Quando clicar no elemento
+    [Arguments]    ${ELEMENTO}    
+    E clicar no elemento    ${ELEMENTO}  
